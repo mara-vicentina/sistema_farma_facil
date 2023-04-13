@@ -12,6 +12,7 @@ import com.mycompany.projeto_pi_farmacia.model.Cliente;
 import com.mycompany.projeto_pi_farmacia.model.ProdutoVenda;
 import com.mycompany.projeto_pi_farmacia.view.TelaInicial;
 import com.mycompany.projeto_pi_farmacia.view.TelaLogin;
+import com.mycompany.projeto_pi_farmacia.view.cliente.TelaClientes;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -280,9 +281,11 @@ public class TelaCadastroVendas extends javax.swing.JFrame {
                 new ProdutoController().atualizarEstoque(produtoVenda.getProdutoId(), produtoVenda.getQuantidadeVenda());
             }
             
-            this.limparCampos();
-            
             JOptionPane.showMessageDialog(this, "Venda realizada com sucesso.");
+            this.limparCampos();
+            TelaInicial.telaVenda.atualizarListagem();
+            TelaVenda.telaCadastroVendas.setVisible(false);
+            TelaInicial.telaVenda.setVisible(true);
         } else {
             JOptionPane.showMessageDialog(this, "Erro ao realizar venda.");
         }

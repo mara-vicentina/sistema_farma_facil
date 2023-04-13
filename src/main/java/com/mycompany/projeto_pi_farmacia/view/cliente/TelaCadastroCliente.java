@@ -238,6 +238,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         if (retorno) {
             TelaInicial.telaClientes.atualizarListagem();
             JOptionPane.showMessageDialog(this, "Cliente cadastrado com sucesso!");
+            this.limparCampos();
             TelaClientes.telaCadastroCliente.setVisible(false);
             TelaInicial.telaClientes.setVisible(true);
         } else {
@@ -253,7 +254,16 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
                 break;
         }
     }//GEN-LAST:event_formKeyPressed
-
+    
+    public void limparCampos(){
+        campoNomeCliente.setText("");
+        campoSobrenomeCliente.setText("");
+        campoCpfCliente.setText("");
+        campoEmailCliente.setText("");
+        campoTelefoneCliente.setText("");
+        campoEnderecoCliente.setText("");
+    }
+    
     private void cancelar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelar
         // TODO add your handling code here:
          TelaClientes.telaCadastroCliente.setVisible(false);

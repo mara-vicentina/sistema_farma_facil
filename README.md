@@ -1,7 +1,20 @@
+-- ------------------------------------------------------
+
+//A conexão com o banco se encontra no arquivo DataBase.java que pode ser acessado pelo seguinte diretório do projeto:
+//src\main\java\com\mycompany\projeto_pi_farmacia\utils
+
+//Depois que rodar o script SQL disponibilizado, é possível logar no sistema pelo usuario: admin, senha:1234.
+
+
+-- ------------------------------------------------------
+
+//script SQL do para o banco de dados :
+
+-- ------------------------------------------------------
+
 -- MySQL dump 10.13  Distrib 8.0.19, for Win64 (x86_64)
 --
 -- Host: localhost    Database: bdfarmacia
--- ------------------------------------------------------
 -- Server version	5.5.5-10.4.27-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
